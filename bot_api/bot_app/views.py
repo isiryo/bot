@@ -8,6 +8,7 @@ import bot_app.apps as apps
 
 class api(TemplateView):
    # try:
+        @csrf_exempt
         def post(self, request, *args, **kwargs):
             massage=json.load(request)["events"]["message"]["text"]
             person=json.load(request)["events"]["source"]["userId"]
